@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片颜色拾取器</title>
+    <style>
+        #imageContainer {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            /* 限制 canvas 最大宽度 */
+            margin: 0 auto;
+        }
+        #pickerCanvas {
+            display: block;
+            border: 1px solid #ccc;
+            /* 根据需要调整 canvas 的最大高度 */
+        }
+        #colorDisplay {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #000;
+            font-family: Arial, sans-serif;
+            /* 添加浮动或内联块以确保颜色方块显示在其右侧 */
+            float: left;
+            clear: both;
+        }
+        #colorBox {
+            display: inline-block;
+            width: 50px;
+            /* 你可以调整这个值 */
+            height: 50px;
+            /* 你可以调整这个值 */
+            margin-left: 10px;
+            /* 你可以调整这个值来设置与文本的间距 */
+            border: 1px solid #000;
+        }
+        #imageFile {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imageContainer">
+        <canvas id="pickerCanvas"></canvas>
+        <input type="file" id="imageFile" accept="image/*">
+        <div id="colorDisplay">移动鼠标以拾取颜色</div>
+        <div id="colorBox"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
