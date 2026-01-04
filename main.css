@@ -336,6 +336,29 @@ article {
     font-family: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+footer a {
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+footer img {
+    filter: grayscale(100%);
+    transition: filter 0.2s;
+}
+
+footer a:hover img {
+    filter: grayscale(0%);
+}
+
 /* 响应式设计 */
 @media (max-width: 600px) {
     body {
